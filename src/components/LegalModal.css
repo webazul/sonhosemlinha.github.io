@@ -1,0 +1,251 @@
+.legal-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 15000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.legal-modal {
+  background: white;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.legal-modal-header {
+  padding: 2rem 2rem 1rem 2rem;
+  border-bottom: 2px solid #f0ede8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #f8f6f3, #f0ede8);
+  border-radius: 16px 16px 0 0;
+}
+
+.legal-modal-header h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #2c2c2c;
+  margin: 0;
+}
+
+.legal-modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.legal-modal-close:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+}
+
+.legal-modal-content {
+  padding: 2rem;
+  overflow-y: auto;
+  flex: 1;
+  font-family: 'Handlee', cursive;
+  line-height: 1.6;
+  color: #333;
+}
+
+.legal-modal-content h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #d4af37;
+  margin: 2rem 0 1rem 0;
+  border-bottom: 1px solid #f0ede8;
+  padding-bottom: 0.5rem;
+}
+
+.legal-modal-content h3:first-child {
+  margin-top: 0;
+}
+
+.legal-modal-content h4 {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #555;
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+.legal-modal-content p {
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+}
+
+.legal-modal-content ul {
+  margin: 0.5rem 0 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.legal-modal-content li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.legal-modal-content strong {
+  color: #2c2c2c;
+  font-weight: 600;
+}
+
+.legal-modal-content small {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.legal-modal-footer {
+  padding: 1rem 2rem 2rem 2rem;
+  border-top: 1px solid #f0ede8;
+  display: flex;
+  justify-content: flex-end;
+  background: #fafafa;
+  border-radius: 0 0 16px 16px;
+}
+
+.legal-modal-btn {
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.legal-modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Scrollbar personalizada */
+.legal-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.legal-modal-content::-webkit-scrollbar-track {
+  background: #f0ede8;
+  border-radius: 4px;
+}
+
+.legal-modal-content::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 4px;
+}
+
+.legal-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #b8941f;
+}
+
+@media (max-width: 768px) {
+  .legal-modal-backdrop {
+    padding: 1rem;
+  }
+
+  .legal-modal {
+    max-height: 95vh;
+  }
+
+  .legal-modal-header {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+
+  .legal-modal-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .legal-modal-content {
+    padding: 1.5rem;
+  }
+
+  .legal-modal-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .legal-modal-footer {
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-modal-backdrop {
+    padding: 0.5rem;
+  }
+
+  .legal-modal-header {
+    padding: 1rem 1rem 0.75rem 1rem;
+  }
+
+  .legal-modal-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .legal-modal-content {
+    padding: 1rem;
+  }
+
+  .legal-modal-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .legal-modal-content p,
+  .legal-modal-content li {
+    font-size: 0.9rem;
+  }
+
+  .legal-modal-footer {
+    padding: 0.75rem 1rem 1rem 1rem;
+  }
+
+  .legal-modal-btn {
+    width: 100%;
+  }
+}

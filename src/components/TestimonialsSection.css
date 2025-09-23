@@ -1,0 +1,212 @@
+.testimonials {
+  padding: 6rem 0;
+  background: white;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.testimonials-badge {
+  margin-bottom: 1rem;
+}
+
+.testimonials-badge span {
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-family: 'Satisfy', cursive;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.testimonials-title {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #2c2c2c;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonials-title .highlight {
+  color: #d4af37;
+}
+
+.testimonials-subtitle {
+  font-family: 'Handlee', cursive;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  align-items: stretch;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, #f8f6f3, #f0ede8);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e8e5e0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.quote-icon {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: #d4af37;
+  line-height: 1;
+  margin-bottom: 1rem;
+  opacity: 0.3;
+}
+
+.testimonial-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-text {
+  font-family: 'Handlee', cursive;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  flex: 1;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.star {
+  font-size: 1rem;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.star.filled {
+  opacity: 1;
+}
+
+.testimonial-author {
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0ddd8;
+  margin-top: auto;
+}
+
+.author-name {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 0 0 0.25rem 0;
+}
+
+.author-occasion {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 0.9rem;
+  color: #d4af37;
+  font-weight: 500;
+  margin: 0 0 0.25rem 0;
+}
+
+.author-location {
+  font-family: 'Handlee', cursive;
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0;
+}
+
+
+.testimonials-cta {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  border-radius: 20px;
+  color: white;
+}
+
+.testimonials-cta h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.testimonials-cta p {
+  font-family: 'Handlee', cursive;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.testimonials-cta .btn-primary {
+  background: white;
+  color: #d4af37;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 400;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials-cta .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: #f8f6f3;
+}
+
+@media (max-width: 768px) {
+  .testimonials-title {
+    font-size: 2.2rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .testimonials-cta {
+    padding: 2rem 1rem;
+  }
+
+  .testimonials-cta h3 {
+    font-size: 1.6rem;
+  }
+}
