@@ -112,6 +112,14 @@
     text-align: center;
   }
 
+  .about-image {
+    order: 2;
+  }
+
+  .about-content {
+    order: 1;
+  }
+
   .about-title {
     font-size: 2.2rem;
   }
