@@ -16,10 +16,10 @@ function PortfolioSection() {
   const portfolioItems = [
     { id: 1, category: 'noiva', title: t('portfolio.weddingClassic'), image: './1.png' },
     { id: 2, category: 'noiva', title: t('portfolio.weddingModern'), image: './2.png' },
-    { id: 3, category: 'festa', title: t('portfolio.partyElegant') },
-    { id: 4, category: 'festa', title: t('portfolio.partyGala') },
-    { id: 5, category: 'social', title: t('portfolio.formalSuit') },
-    { id: 6, category: 'social', title: t('portfolio.formalBlazer') },
+    { id: 3, category: 'festa', title: t('portfolio.partyElegant'), image: './1 3.png' },
+    { id: 4, category: 'festa', title: t('portfolio.partyGala'), image: './2 3.png' },
+    { id: 5, category: 'social', title: t('portfolio.formalSuit'), image: './3 3.png' },
+    { id: 6, category: 'social', title: t('portfolio.formalBlazer'), image: './4 3.png' },
     { id: 7, category: 'casual', title: t('portfolio.casualChic') },
     { id: 8, category: 'casual', title: t('portfolio.casualBlouse') },
     { id: 9, category: 'noiva', title: t('portfolio.weddingBoho'), image: './3.png' }
