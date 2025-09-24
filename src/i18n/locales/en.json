@@ -115,7 +115,14 @@
     "submitButton": "Request Free Consultation",
     "submitting": "Submitting...",
     "requiredNote": "* Required fields. Your data will be treated with complete confidentiality.",
-    "successMessage": "Thank you for your interest! We will contact you soon."
+    "successMessage": "Thank you for your interest! We will contact you soon.",
+    "errorName": "Please enter your full name.",
+    "errorEmail": "Please enter your email address.",
+    "errorEmailFormat": "Please enter a valid email address.",
+    "errorPhone": "Please enter your mobile/WhatsApp number.",
+    "errorService": "Please describe the type of service you are looking for.",
+    "errorDescription": "Please describe your project.",
+    "errorSending": "An error occurred while sending the form. Please try again."
   },
   "footer": {
     "description": "Sewing atelier specialized in wedding dresses and custom clothing. We transform dreams into reality.",

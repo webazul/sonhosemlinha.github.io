@@ -115,7 +115,14 @@
     "submitButton": "Solicitar Consulta Gratuita",
     "submitting": "A enviar...",
     "requiredNote": "* Campos obrigatórios. Os seus dados serão tratados com total confidencialidade.",
-    "successMessage": "Obrigada pelo seu interesse! Entraremos em contacto brevemente."
+    "successMessage": "Obrigada pelo seu interesse! Entraremos em contacto brevemente.",
+    "errorName": "Por favor, preencha o seu nome completo.",
+    "errorEmail": "Por favor, preencha o seu email.",
+    "errorEmailFormat": "Por favor, introduza um email válido.",
+    "errorPhone": "Por favor, preencha o seu telemóvel/WhatsApp.",
+    "errorService": "Por favor, descreva o tipo de serviço que procura.",
+    "errorDescription": "Por favor, descreva o seu projeto.",
+    "errorSending": "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente."
   },
   "footer": {
     "description": "Atelier de costura especializado em vestidos de noiva e roupas sob medida. Transformamos sonhos em realidade.",

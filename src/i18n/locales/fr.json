@@ -115,7 +115,14 @@
     "submitButton": "Demander une Consultation Gratuite",
     "submitting": "Envoi en cours...",
     "requiredNote": "* Champs obligatoires. Vos données seront traitées en toute confidentialité.",
-    "successMessage": "Merci pour votre intérêt ! Nous vous contacterons bientôt."
+    "successMessage": "Merci pour votre intérêt ! Nous vous contacterons bientôt.",
+    "errorName": "Veuillez entrer votre nom complet.",
+    "errorEmail": "Veuillez entrer votre email.",
+    "errorEmailFormat": "Veuillez entrer un email valide.",
+    "errorPhone": "Veuillez entrer votre mobile/WhatsApp.",
+    "errorService": "Veuillez décrire le type de service que vous recherchez.",
+    "errorDescription": "Veuillez décrire votre projet.",
+    "errorSending": "Une erreur s'est produite lors de l'envoi du formulaire. Veuillez réessayer."
   },
   "footer": {
     "description": "Atelier de couture spécialisé en robes de mariée et vêtements sur mesure. Nous transformons les rêves en réalité.",

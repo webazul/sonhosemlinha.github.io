@@ -115,7 +115,14 @@
     "submitButton": "Solicitar Consulta Gratuita",
     "submitting": "Enviando...",
     "requiredNote": "* Campos obligatorios. Tus datos serán tratados con total confidencialidad.",
-    "successMessage": "¡Gracias por tu interés! Nos pondremos en contacto pronto."
+    "successMessage": "¡Gracias por tu interés! Nos pondremos en contacto pronto.",
+    "errorName": "Por favor, introduce tu nombre completo.",
+    "errorEmail": "Por favor, introduce tu email.",
+    "errorEmailFormat": "Por favor, introduce un email válido.",
+    "errorPhone": "Por favor, introduce tu móvil/WhatsApp.",
+    "errorService": "Por favor, describe el tipo de servicio que buscas.",
+    "errorDescription": "Por favor, describe tu proyecto.",
+    "errorSending": "Ocurrió un error al enviar el formulario. Por favor, inténtalo de nuevo."
   },
   "footer": {
     "description": "Atelier de costura especializado en vestidos de novia y ropa a medida. Transformamos sueños en realidad.",

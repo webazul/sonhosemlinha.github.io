@@ -16,6 +16,7 @@ function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
+  const [submitError, setSubmitError] = useState('')
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -23,29 +24,105 @@ function ContactForm() {
       ...prev,
       [name]: value
     }))
+    // Limpar mensagens de erro quando o utilizador começar a editar
+    if (submitError) setSubmitError('')
+  }
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
+  const validateForm = () => {
+    // Campos obrigatórios
+    if (!formData.nome.trim()) {
+      setSubmitError(t('contact.errorName'))
+      return false
+    }
+    if (!formData.email.trim()) {
+      setSubmitError(t('contact.errorEmail'))
+      return false
+    }
+    if (!formData.telefone.trim()) {
+      setSubmitError(t('contact.errorPhone'))
+      return false
+    }
+    if (!formData.servico.trim()) {
+      setSubmitError(t('contact.errorService'))
+      return false
+    }
+    if (!formData.descricao.trim()) {
+      setSubmitError(t('contact.errorDescription'))
+      return false
+    }
+
+    // Validar formato do email
+    if (!validateEmail(formData.email)) {
+      setSubmitError(t('contact.errorEmailFormat'))
+      return false
+    }
+
+    return true
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitMessage('')
+    setSubmitError('')
 
-    // Simular envio do formulário
-    setTimeout(() => {
-      setSubmitMessage(t('contact.successMessage'))
+    // Validar formulário
+    if (!validateForm()) {
       setIsSubmitting(false)
-      setFormData({
-        nome: '',
-        telefone: '',
-        email: '',
-        servico: '',
-        dataEvento: '',
-        descricao: ''
+      return
+    }
+
+    try {
+      // Preparar dados para a API - mapear campos do formulário para o que a API espera
+      const apiData = {
+        nome: formData.nome.trim(),
+        email: formData.email.trim(),
+        telefone: formData.telefone.trim(),
+        assunto: formData.servico.trim() + (formData.dataEvento ? ` - Data: ${formData.dataEvento}` : ''),
+        mensagem: formData.descricao.trim()
+      }
+
+      // Fazer o POST request para a API
+      const response = await fetch('https://contact-form-j4zcy7ttjq-uk.a.run.app', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Token': 'token-sonhosemlinha-4f3b2e5a'
+        },
+        body: JSON.stringify(apiData)
       })
 
-      setTimeout(() => {
-        setSubmitMessage('')
-      }, 5000)
-    }, 2000)
+      if (response.ok) {
+        // Sucesso - mostrar mensagem de sucesso e limpar formulário
+        setSubmitMessage(t('contact.successMessage'))
+        setFormData({
+          nome: '',
+          telefone: '',
+          email: '',
+          servico: '',
+          dataEvento: '',
+          descricao: ''
+        })
+
+        // Limpar mensagem de sucesso após 5 segundos
+        setTimeout(() => {
+          setSubmitMessage('')
+        }, 5000)
+      } else {
+        // Erro da API
+        throw new Error(`HTTP ${response.status}`)
+      }
+    } catch (error) {
+      console.error('Erro ao enviar formulário:', error)
+      setSubmitError(t('contact.errorSending'))
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -111,6 +188,12 @@ function ContactForm() {
             {submitMessage && (
               <div className="submit-message success">
                 {submitMessage}
+              </div>
+            )}
+
+            {submitError && (
+              <div className="submit-message error">
+                {submitError}
               </div>
             )}
 
