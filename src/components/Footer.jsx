@@ -63,7 +63,9 @@ function Footer() {
                   <RiPhoneLine />
                 </span>
                 <div>
-                  <p>+351 910 935 539</p>
+                  <a href="tel:+351910935539" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <p>+351 910 935 539</p>
+                  </a>
                 </div>
               </div>
               <div className="contact-item">
@@ -71,7 +73,9 @@ function Footer() {
                   <RiMailLine />
                 </span>
                 <div>
-                  <p>sonhosemlinhapt@gmail.com</p>
+                  <a href="mailto:sonhosemlinhapt@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <p>sonhosemlinhapt@gmail.com</p>
+                  </a>
                 </div>
               </div>
             </div>

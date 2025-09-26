@@ -9,7 +9,6 @@ function ContactForm() {
     nome: '',
     telefone: '',
     email: '',
-    servico: '',
     dataEvento: '',
     descricao: ''
   })
@@ -47,14 +46,6 @@ function ContactForm() {
       setSubmitError(t('contact.errorPhone'))
       return false
     }
-    if (!formData.servico.trim()) {
-      setSubmitError(t('contact.errorService'))
-      return false
-    }
-    if (!formData.descricao.trim()) {
-      setSubmitError(t('contact.errorDescription'))
-      return false
-    }
 
     // Validar formato do email
     if (!validateEmail(formData.email)) {
@@ -83,12 +74,12 @@ function ContactForm() {
         nome: formData.nome.trim(),
         email: formData.email.trim(),
         telefone: formData.telefone.trim(),
-        assunto: formData.servico.trim() + (formData.dataEvento ? ` - Data: ${formData.dataEvento}` : ''),
-        mensagem: formData.descricao.trim()
+        assunto: formData.dataEvento ? `Data: ${formData.dataEvento}` : 'Contacto do website',
+        mensagem: formData.descricao.trim() || 'Sem mensagem adicional'
       }
 
       // Fazer o POST request para a API
-      const response = await fetch('https://contact-form-j4zcy7ttjq-uk.a.run.app', {
+      const response = await fetch('https://form.webazul.pt', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -104,7 +95,6 @@ function ContactForm() {
           nome: '',
           telefone: '',
           email: '',
-          servico: '',
           dataEvento: '',
           descricao: ''
         })
@@ -238,19 +228,6 @@ function ContactForm() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="servico">{t('contact.serviceLabel')}</label>
-              <input
-                type="text"
-                id="servico"
-                name="servico"
-                value={formData.servico}
-                onChange={handleChange}
-                required
-                placeholder={t('contact.servicePlaceholder')}
-              />
-            </div>
-
-            <div className="form-group">
               <label htmlFor="dataEvento">{t('contact.dateLabel')}</label>
               <input
                 type="date"
@@ -269,7 +246,7 @@ function ContactForm() {
                 value={formData.descricao}
                 onChange={handleChange}
                 rows="4"
-                placeholder={t('contact.descriptionPlaceholder')}
+                placeholder=""
               ></textarea>
             </div>
 
