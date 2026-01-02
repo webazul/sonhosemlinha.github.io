@@ -63,8 +63,8 @@ function Footer() {
                   <RiPhoneLine />
                 </span>
                 <div>
-                  <a href="tel:+351910935539" style={{ color: 'inherit', textDecoration: 'none' }}>
-                    <p>+351 910 935 539</p>
+                  <a href="tel:+351924702709" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <p>+351 924 702 709</p>
                   </a>
                 </div>
               </div>

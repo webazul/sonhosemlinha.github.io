@@ -7,7 +7,7 @@ function WhatsAppWidget() {
   const { t } = useTranslation()
   const [isExpanded, setIsExpanded] = useState(false)
 
-  const whatsappNumber = "+351910935539"
+  const whatsappNumber = "+351924702709"
   const defaultMessage = t('whatsapp.defaultMessage')
 
   const openWhatsApp = () => {
